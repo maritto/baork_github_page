@@ -1,0 +1,17 @@
+$color: (
+  "base": #11022b,
+);
+
+@mixin color($key, $value) {
+  .color-#{$key} {
+    color: $value;
+  }
+
+  .bg-color-#{$key} {
+    background-color: $value;
+  }
+}
+
+@each $key, $value in $color {
+  @include color($key, $value);
+}
